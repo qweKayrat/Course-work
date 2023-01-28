@@ -180,5 +180,6 @@ from random import randint
 
 # github.com
 
-print("Проверка репозитория")
+# print("Проверка репозитория")
 
+print("Изменили склонированный репозиторий")
