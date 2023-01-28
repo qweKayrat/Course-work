@@ -164,18 +164,21 @@ from random import randint
 #     print()
 # print("Количество отрицательных элементов: ", s)
 
-n = int(input("Введите размер списка: "))
-m = [[randint(0, 100) for x in range(n)] for y in range(n)]
-
-for row in m:
-    for j in row:
-        print(j, end="\t\t")
-    print()
-
-k = m[0][0]
-for i in range(len(m)):
-    if k > m[i][i]:
-        k = m[i][i]
-print(k)
+# n = int(input("Введите размер списка: "))
+# m = [[randint(0, 100) for x in range(n)] for y in range(n)]
+#
+# for row in m:
+#     for j in row:
+#         print(j, end="\t\t")
+#     print()
+#
+# k = m[0][0]
+# for i in range(len(m)):
+#     if k > m[i][i]:
+#         k = m[i][i]
+# print(k)
 
 # github.com
+
+print("Проверка репозитория")
+
