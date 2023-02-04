@@ -162,3 +162,108 @@
 # display_info("Ira", 23)
 # display_info(age=23, name="Ira")
 # display_info("Igor", age=23, name="Ira")
+
+# def for_print(lst):
+#     for row in lst:
+#         for i in row:
+#             print(i, end="\t")
+#         print()#
+#
+#
+# lst1 = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]]
+#
+# for_print(lst1)
+
+# def digits_sum(n, even=True):
+#     s = 0
+#     while n > 0:
+#         cur_digit = n % 10
+#         if even and cur_digit % 2 == 0:
+#             s += cur_digit
+#         elif not even and cur_digit % 2:
+#             s += cur_digit
+#         n //= 10
+#     return s
+
+
+# print("Сумма четных цифр")
+# print(digits_sum(9874023))
+# print(digits_sum(38271))
+# print(digits_sum(123456789))
+# print("Сумма нечетных цифр")
+# print(digits_sum(9874023, even=False))
+# print(digits_sum(38271, even=False))
+# print(digits_sum(123456789, even=False))
+
+
+# def add_number(n):
+#     print("n:", n, "=", id(n))
+#     n = n + [4]  # != ( n += [4] )
+#     print("n:", n, "=", id(n))
+#     return n
+
+
+# x = [1, 2, 3]
+# print("x:", x, " = ", id(x))
+# add_number(x)
+# print("x:", x, " = ", id(x))
+# print("y:", y, " = ", id(y))
+
+# Tuple - Кортежи
+
+# lst = [1, 2, 3]
+# tpl = (1, 2, 3)
+# print(lst.__sizeof__())
+# print(tpl.__sizeof__())
+
+# tpl = (1, 2, 3, 4, 5, 6, 7)
+# print(tpl)
+# print(tpl[2])
+# tpl[2] = 10
+# print(tpl[1::2])
+
+from random import randint
+
+
+# s = tuple(2**i for i in range(1, 13))
+# print(s)
+
+# t1 = tuple("Hello")
+# t2 = tuple("world")
+# t3 = t1 + t2
+# print(t3)
+# print(t3 * 2)
+# print(t3.count("l"))
+# if "a" in t3:
+#     print(t3.index('a'))
+# else:
+#     print("Такого символа нет")
+
+# def slicer(tpl, el):
+#     if el in tpl:
+#         if tpl.count(el) > 1:
+#             first = tpl.index(el)
+#             second = tpl.index(el, first + 1)
+#             return tpl[first: second + 1]
+#         else:
+#             return tpl[tpl.index(el):]
+
+#      else:
+#         return ()
+
+
+# print(slicer((1, 2, 3), 8))
+# print(slicer((1, 8, 3, 4, 8, 8, 9, 2), 8))
+# print(slicer((1, 2, 8, 5, 1, 2, 9), 8))
+
+def range_tuple(num1, num2):
+    return tuple(randint(num1, num2) for _ in range(10))
+
+
+tpl1 = range_tuple(0, 5)
+tpl2 = range_tuple(-5, 0)
+tpl3 = tpl1 + tpl2
+print(tpl1)
+print(tpl2)
+print(tpl3)
+print("0 =", tpl3.count(0))
