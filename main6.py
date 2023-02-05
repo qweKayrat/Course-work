@@ -224,7 +224,6 @@
 
 from random import randint
 
-
 # s = tuple(2**i for i in range(1, 13))
 # print(s)
 
@@ -256,14 +255,156 @@ from random import randint
 # print(slicer((1, 8, 3, 4, 8, 8, 9, 2), 8))
 # print(slicer((1, 2, 8, 5, 1, 2, 9), 8))
 
-def range_tuple(num1, num2):
-    return tuple(randint(num1, num2) for _ in range(10))
+# def range_tuple(num1, num2):
+#     return tuple(randint(num1, num2) for _ in range(10))
 
 
-tpl1 = range_tuple(0, 5)
-tpl2 = range_tuple(-5, 0)
-tpl3 = tpl1 + tpl2
-print(tpl1)
-print(tpl2)
-print(tpl3)
-print("0 =", tpl3.count(0))
+# tpl1 = range_tuple(0, 5)
+# tpl2 = range_tuple(-5, 0)
+# tpl3 = tpl1 + tpl2
+# print(tpl1)
+# print(tpl2)
+# print(tpl3)
+# print("0 =", tpl3.count(0))
+
+# t = (10, 11, [1, 2, 3], [4, 5, 6], ["Hello", "world"])
+# print(t, id(t))
+
+# t[4][0] = "new"
+# t[4].append("hi")
+# print(t, id(t))
+
+# t = (1, 2, 3)
+# x = t[0]
+# y = t[1]
+# z = t[2]
+# x, y, z = t  # Распаковка кортежа
+# print(x, y, z)
+
+# def get_user():
+#     name, age, is_married = "Tom", 22, False
+#     return name, age, is_married
+
+
+# user = get_user()
+# print(user)
+# print(user[0])
+# print(user[1])
+# print(user[2])
+
+# first_name, year, married = get_user()
+# print(first_name, year, married)
+
+# lst = [1, 2, 3, 4, 5]
+# print(type(lst))
+# print(lst)
+# tpl = tuple(lst)
+# print(type(tpl))
+# print(tpl)
+# lst = list(tpl)
+# print(type(lst))
+# print(lst)
+
+# countries = (
+#     ("Германия", 80.2, (("Берлин", 3.236), ("Мюнхен", 1.718))),
+#     ("Франция", 66, (("Париж", 2.2), ("Марсель", 1.6)))
+# )
+
+# print(countries)
+
+# for country in countries:
+#     country_name, country_population, cities = country
+#     print("\nСтрана:", country_name, "\nНаселение:", country_population)
+#     for city in cities:
+#         city_name, city_population = city
+#         print("\tГород: ", city_name, " (население: ", city_population, ")", sep="")
+
+# Множество - set
+
+# s = {"banana", "apple", "orange", "banana", "apple"}
+# print(s)
+# print(type(s))
+# print(len(s))
+
+# a = set("Hello")
+# print(type(a))
+# print(a)
+
+# s = {x*x for x in range(10)}
+# print(s)
+
+# def to_set(lst):
+#     s = set(lst)
+#     return s, len(s)
+
+# a = "я обычная строка"
+# b = [4, 5, 4, 6, 2, 9, 11, 3, 4, 2]
+# print(to_set(a))
+# print(to_set(b))
+
+# lst = ["ab_1", "ac_2", "bc_1", "bc_2"]
+# a = {i for i in lst if "a" not in i}
+# a = {"A"+i[1:] if i[0] == "a" else "B"+i[1:] for i in lst}
+# a = {i.capitalize() if i[0] == "a" else "B" + i[1:] for i in lst if i[1] == "c"}
+# print(a)
+
+# for i in lst:
+#     if i[1] == "c":
+#         if i[0] == 'a':
+#             print("A" + i[1:])
+#         else:
+#             print("B" + i[1:])
+
+# s1 = {1, 2}
+# s2 = {3}
+# s3 = {4, 5}
+# s4 = {3, 2, 6}
+# s5 = {6}
+# s6 = {7, 8}
+# s7 = {9, 8}
+
+# s = s1 | s2 | s3 | s4 | s5 | s6 | s7
+# print(s)
+# print(len(s))
+# print(min(s))
+# print(max(s))
+
+
+# str1 = set(input("Введите первую строку: "))
+# str2 = set(input("Введите вторую строку: "))
+# print("Общими буквами являются:\n", str1 & str2)
+
+
+# a = {0, 1, 2, 3, 4}
+# b = {3, 2, 1}
+
+# print(a <= b)
+# print(a >= b)
+# print(a != b)
+
+# music = {"Костя", "Женя", "Илья"}
+# drawing = {"Марина", "Женя", "Света"}
+# print("Только с одним хоби", music ^ drawing)
+# print("Ходят на два кружка", music & drawing)
+# print("Рисованием занимаются: ", drawing - music)
+
+# frozenset (замороженное множество)
+# s = frozenset([1, 2, 3, 4, 5])
+# print(s)
+# a = frozenset("hello")
+# print(a)
+
+# Dict - Словарь
+# from random import randint
+
+# d = {i: randint(1, 100) for i in range(1, 11)}
+# d = {str(i) + "-й элемент": randint(1, 100) for i in range(1, 11)}
+# d = {input("Ключ: "): input("Значение: ") for i in range(3)}
+# d = {"one": 1, "two": 2, "three": 3}
+# print(d)
+# d["two"] = 200
+# d["one"] += 100
+# print(d)
+
+# for key, val in d.items():
+#     print(key, val)
