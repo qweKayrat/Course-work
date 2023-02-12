@@ -408,3 +408,59 @@ from random import randint
 
 # for key, val in d.items():
 #     print(key, val)
+
+# dct = {i: input("--> ") for i in range(1, 5)}
+# print(dct)
+# dl = int(input("Какой ключ изменить: "))
+# try:
+#     del dct[dl]
+#     print(dct)
+# except KeyError:
+#     print("Элемента с таким ключом: ", dl, ",нет в словаре ")
+#
+# goods = {
+#     "1": ["Core-i3-4330", 9, 4500],
+#     "2": ["Core-i3-4670K", 3, 8500],
+#     "3": ["AMD FX-6300", 6, 3700],
+#     "4": ["Pentium G3220", 8, 2100],
+#     "5": ["Core-i5-3450", 5, 6400],
+# }
+# for key, values in goods.items():
+#     print(f'{key}) {values[0]} - {values[1]} шт. по {values[2]}руб')
+#
+# while True:
+#     num = input("№ ")
+#     if num != '0':
+#         qty = int(input("Количество: "))
+#         goods[num][1] += qty
+#     else:
+#         break
+#
+# for key, values in goods.items():
+#     print(f'{key}) {values[0]} - {values[1]} шт. по {values[2]}руб')
+
+# d = {"a": 1, "b": 2, "c": 3}
+# value = d.get('b1', 'Такого ключа нет')
+# print(value)
+# print(d.keys())
+# print(d.values())
+# print(d.items())
+# item = d.pop('e', 5) - если ключа 'e' нет в словаре, вернёт 5
+# item = d.setdefault('e',100)
+# print(item)
+# d.update({('b', 4), ('r', 7)})
+# print(d)
+
+# x = {'a': 1, 'b': 2}
+# y = {'b': 3, 'c': 4}
+# z = x.copy()
+# z.update(y)
+# z = x | y
+# print(z)
+
+d = {'name': 'Kelly', 'age': 25, 'salary': 8000, 'city': 'New York'}
+new_d = dict()
+new_d['name'] = d.pop("name")
+new_d['salary'] = d.pop('salary')
+print(d)
+print(new_d)
