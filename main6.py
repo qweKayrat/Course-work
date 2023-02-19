@@ -458,9 +458,238 @@ from random import randint
 # z = x | y
 # print(z)
 
-d = {'name': 'Kelly', 'age': 25, 'salary': 8000, 'city': 'New York'}
-new_d = dict()
-new_d['name'] = d.pop("name")
-new_d['salary'] = d.pop('salary')
-print(d)
-print(new_d)
+# d = {'name': 'Kelly', 'age': 25, 'salary': 8000, 'city': 'New York'}
+# new_d = dict()
+# new_d['name'] = d.pop("name")
+# new_d['salary'] = d.pop('salary')
+# print(d)
+# print(new_d)
+
+# a = {'b': 1, 'a': 4, 'd': 2, 'c': 3}
+# d = list(a.items())
+# print(d)
+# n, m = zip(*d)
+# print(n)
+# print(m)
+#
+# c = list(zip(n, m))
+# print(c)
+# c.sort()
+# print(c)
+#
+# Сортировка словаря преобразовывая в список
+# c = list(zip(m, n))
+# print(c)
+# c.sort()
+# print(c)
+# print(dict(c))
+# c = {v: k for k, v in c}
+# print(c)
+
+
+# month = ['January', 'February', 'March']
+# total_sales = [52_000.00, 51_000.00, 48_000.00]
+# prod_cost = [46_800.00, 45_900.00, 43_200.00]
+#
+# for sales, costs, m in zip(total_sales,prod_cost,month):
+#     profit = sales - costs
+#     print(f'Чистая прибыль в {m} = {profit}')
+
+# one = {'a': 1, "b": 2}
+# two = {'c': 3, "d": 4}
+# print({**one, **two})
+
+# data = ['red', 'green', 'blue']
+# ind = 1
+# for i in data:
+#     print(ind, i)
+#     ind += 1
+# print()
+# for n, i in enumerate(data, 1): # enumerate(data, start = 1)
+#     print(n, i)
+
+# dict_one = {'name': 'Igor', 'email': 'igor@gmail.com', 'job': 'Consultant'}
+# for i, (j, v) in enumerate(dict_one.items(), 1):
+#     print(i, j, "->", v)
+
+# def to_dict(*args):
+#     return {k: k for k in args}
+#
+# print(to_dict(1, 2, 3, 4))
+# print(to_dict("grey", (2, 17), 3.11, -4))
+
+# def qew(*args):
+#     avg = sum(args) / len(args)
+#     print("Средняя арифметическая = ",avg)
+#     return [x for x in args if x < avg]
+#
+# print(qew(1, 2, 3, 4, 5, 6, 7, 8, 9))
+# print(qew(3, 6, 1, 9, 5))
+
+
+# def print_scores(student, *scores):
+#     print('\nStudent name:', student)
+#     for score in scores:
+#         print(score, end=" ")
+# print(*scores)
+# print()
+
+
+# print_scores("Jonathan", 10, 95, 88, 92, 99)
+# print_scores("Rick", 96, 20, 33, 56)
+
+# def func(**kwargs):
+#     return kwargs
+#
+# print(func(a=1, b=2, c=3))
+# print(func())
+# print(func(a='python'))
+
+# def intro(**kwargs):
+#     for k, v in kwargs.items():
+#         print(k, "is", v)
+#     print()
+
+# intro(name='Irina', surname='Sharma', age=22)
+# intro(name='Igor', surname='Wood', email='igor@gmail.com', age=25, phone=89235164532)
+
+# my_dict = {'one': 'first'}
+#
+# def db(**kwargs):
+#     return my_dict.update(kwargs)
+#
+# db(k1=22, k2=31, k3=11, k4=91)
+# db(name='Bob', age=31, weight=61, eyes_color='grey')
+# print("my_dict =", my_dict)
+
+# def func1(*args):
+#     print(args[0])
+#
+# func1(1, 2, 3, 4, 5, 6)
+
+
+# def func(first, *args, **kwargs):
+#     return first, args, kwargs
+# print(func(5, 4, 8, 8, 7, a=6, b=2, c=10))
+
+# Область видимости (score)
+
+# name = 'Tom'
+#
+# def hi():
+#     global name, surname
+#     name = 'Sam'
+#     surname = 'Johnson'
+#     print("Hello", name)
+#
+# def bye():
+#     print("Good by", name)
+#
+# hi()
+# bye()
+# print(name, surname)
+
+# i = 5
+#
+# def func(arg=i):
+#     print(arg)
+#
+# i = 6
+# func()
+# x = 3
+#
+# def add_two(a):
+#     x = 2
+#
+#     def add_some():
+# x = 5
+# return a + x
+#
+# return add_some()
+#
+# print(add_two(3))
+
+# import builtins
+#
+# names = dir(builtins)
+#
+# for t in names:
+#     print(t)
+
+
+# def outer_func(who):
+#     def inner_func():
+#         print("Hello", who)
+#
+#     inner_func()
+
+# outer_func("World!")
+
+
+# def fun1():
+#     a = 6
+#
+# def fun2(b):
+#     a = 4
+#     print("Сумма:", a + b)
+#
+# print('a =', a)
+# fun2(4)
+#
+# fun1()
+
+# x = 25
+# t = 0
+#
+# def fn():
+#     global t
+#     a = 30  # 35
+#
+#     def inner():
+#         nonlocal a
+#         a = 35
+#
+#     inner()
+#     t = a
+#
+# fn()
+# z = x + t
+# print(z)  # 55
+
+
+# def fn1():
+#     x = 25
+#
+#     def fn2():
+x = 33
+
+
+#
+# def fn3():
+#     nonlocal x
+#     x = 55
+#
+# fn3()
+# print("fn2.x =", x)
+#
+# fn2()
+# print("fn1.x =", x)
+#
+# fn1()
+
+
+# def outer(a1, a2, b1, b2):
+#     a = 0
+#     b = 0
+#
+#     def inner():
+#         nonlocal a, b
+#         a = a1 + a2
+#         b = b1 + b2
+#
+#     inner()
+#     return [a, b]
+#
+# print(outer(2, 3, 5, 7))
+
+
