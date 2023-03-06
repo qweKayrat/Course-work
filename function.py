@@ -37,3 +37,25 @@
 
 # {**d, **d2} - Синтаксис объединения словарей, (В 1 словаре обновляются значения по одному ключу со словарём 2)
 
+# Рекурсивная функция:
+
+# def recursive(value):
+#     print(value)
+#     if value < 4:
+#         recursive(value+1)
+#     print(value)
+# out: 1 \n 2 \n 3 \n 4 \n 4 \n 3 \n 2 \n 1
+
+# Рекурсивная функция нахождения факториала n!
+# def fact(n):
+#     if n < 0:
+#         return 1
+#     else:
+#         return n * fact(n - 1)
+
+# Анонимные (lambda) функции:
+
+# summ = lambda x, y: a + y
+
+# Замыкания:
+
